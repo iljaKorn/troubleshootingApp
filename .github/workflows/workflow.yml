@@ -32,7 +32,7 @@ jobs:
         run: mvn -B sonar:sonar -Dsonar.token=$SONAR_TOKEN -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=iljakorn_troubleshootingApp
 
       - name: Maven Test
-        run: mvn clean test jacoco:report
+        run: mvn test jacoco:report
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2

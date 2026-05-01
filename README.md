@@ -4,6 +4,19 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=coverage)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
 [![Coverage Status](https://coveralls.io/repos/github/iljaKorn/troubleshootingApp/badge.svg?branch=master)](https://coveralls.io/github/iljaKorn/troubleshootingApp?branch=master)
 
+Для работы проекта необходимо запустить Docker с контейнерами для Prometheus и Grafana. Файл находится в docker-compose/metrics 
+### Необходимые зависимости
+| Зависимость | Версия |
+|-------------|--------|
+| ☕ Java | 21 | 
+| 🐳 Docker | 24+ |
+| 🔄 Maven | 3.9+ |
+
+#### Запуск в IDE
+1. Найдите класс с `@SpringBootApplication` (`TroubleshootingAppApplication.java`)
+2. Нажмите **Run** рядом с классом
+3. Приложение запустится на `http://localhost:8080`
+
 # Задание 1
 Создал простой CRUD сервис для манипуляций с сущностью Student \
 В методе create добавил цикл, чтобы он выполнялся подольше \
@@ -54,3 +67,4 @@ Dashboard со статистикой Spring-boot 3 (Spring-boot 3 statistics da
 | rate(jvm_gc_pause_seconds_count[5m])                                                                                                                                                      | Активность сборщика мусора        |
 
 # Задание 5
+Файл с workflow находится в .github/workflow 
