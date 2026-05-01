@@ -28,3 +28,25 @@
 ## Отчет по дампу памяти
 Если открыть файл heap_dump.hprof в IDE можно увидеть следующее:
 ![heap_dump.hprof](heap_dump_img.jpg)
+
+# Задание 3
+Логи прописаны в файле StudentRepository
+
+# Задание 4 
+Все файлы лежат в папке dashboards
+## Скриншоты
+Мой кастомный dashboard (My Troubleshooting Dashboard.json)
+![M_Troubleshooting_Dashboard](dashboards/M_Troubleshooting_Dashboard_img.jpg)
+
+Dashboard со статистикой Spring-boot 3 (Spring-boot 3 statistics dashboard.json)
+![Spring-boot_statistics](dashboards/Spring-boot_statistics_img.jpg)
+
+## Запросы PromQL
+| Запрос                                                                                                                                                                                    | Метрика                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| sum by(uri) (rate(http_server_requests_seconds_count{application="troubleshootingApp"}[1m]))                                                                                              | Количество запросов по эндпоинтам |
+| jvm_memory_used_bytes{application="troubleshootingApp", area="heap"}                                                                                                                      | Использование памяти JVM          |
+| sum by(uri) (rate(http_server_requests_seconds_sum{application="troubleshootingApp"}[5m])) / sum by(uri) (rate(http_server_requests_seconds_count{application="troubleshootingApp"}[5m])) | Среднее время запросов к URL      |
+| rate(jvm_gc_pause_seconds_count[5m])                                                                                                                                                      | Активность сборщика мусора        |
+
+# Задание 5
