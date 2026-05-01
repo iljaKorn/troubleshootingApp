@@ -19,6 +19,15 @@ public class StudentService {
     }
 
     public Student createStudent(Student student) {
+
+        int num = 1;
+        for(int i = 0; i < 1000000; i++){
+            num *= 1001;
+            for(int j = 0; j < 1000; j++){
+                num -= 1;
+            }
+        }
+
         return studentRepository.save(student);
     }
 
@@ -39,6 +48,9 @@ public class StudentService {
     }
 
     public void deleteStudent(Long id) {
+        studentRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException(String.format("Студент с id: %d не найден", id)));
+
         studentRepository.deleteById(id);
     }
 }
