@@ -1,0 +1,136 @@
+{
+  "info": {
+    "_postman_id": "77f78ece-8d31-4762-9931-0f8b9df653da",
+    "name": "Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26139898"
+  },
+  "item": [
+    {
+      "name": "create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Ilya\",\r\n    \"lastName\": \"Kornilov\",\r\n    \"university\": \"VSU\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/students/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "findAll",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/find/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "find",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "findById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/find/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "find",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Ilya\",\r\n    \"lastName\": \"Kornilov_Update\",\r\n    \"university\": \"VSU\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/students/update/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "update",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Ilya\",\r\n    \"lastName\": \"Kornilov\",\r\n    \"university\": \"VSU\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students/delete/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "students",
+            "delete",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
