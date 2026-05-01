@@ -53,7 +53,7 @@ jobs:
   release:
     needs: build-and-analyze
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')  # ← Запускается ТОЛЬКО при наличии тега
+    if: startsWith(github.ref, 'refs/tags/v')
     permissions:
       contents: write
     steps:
