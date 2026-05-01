@@ -3,6 +3,8 @@ name: CI & Quality
 on:
   push:
     branches: [master, develop]
+    tags:
+      - 'v*'
   pull_request:
     branches: [master, develop]
   release:
@@ -51,6 +53,9 @@ jobs:
   release:
     needs: build-and-analyze
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')  # ← Запускается ТОЛЬКО при наличии тега
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -68,7 +73,11 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: target/*.jar
-          name: Release
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+              ## Release ${{ github.ref_name }}
+              Автоматическая сборка с проверками SonarCloud и Coveralls.
           draft: false
           prerelease: false
         env:
