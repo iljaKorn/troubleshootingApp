@@ -1,7 +1,7 @@
 # Домашнее задание к лекции "Общее: Решение типовых проблем Java разработки: конвеншены, гит/битбакет, логирование"
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=alert_status)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=coverage)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iljaKorn_troubleshootingApp&metric=alert_status)](https://sonarcloud.io/dashboard?id=iljaKorn_troubleshootingApp)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=iljaKorn_troubleshootingApp&metric=coverage)](https://sonarcloud.io/dashboard?id=iljaKorn_troubleshootingApp)
 [![Coverage Status](https://coveralls.io/repos/github/iljaKorn/troubleshootingApp/badge.svg?branch=master)](https://coveralls.io/github/iljaKorn/troubleshootingApp?branch=master)
 
 Для работы проекта необходимо запустить Docker с контейнерами для Prometheus и Grafana. Файл находится в docker-compose/metrics 
