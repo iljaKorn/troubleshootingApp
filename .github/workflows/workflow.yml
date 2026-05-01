@@ -24,7 +24,11 @@ jobs:
       - name: SonarQube Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar -Dsonar.token=$SONAR_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -B sonar:sonar \
+            -Dsonar.login=$SONAR_TOKEN \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.projectKey=iljaKorn_troubleshootingApp
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
