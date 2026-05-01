@@ -14,3 +14,15 @@ spring:
     console:
       enabled: true
       path: /h2-console
+logging:
+  level:
+    root: INFO
+
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: "*"
