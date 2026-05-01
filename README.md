@@ -1,9 +1,8 @@
 # Домашнее задание к лекции "Общее: Решение типовых проблем Java разработки: конвеншены, гит/битбакет, логирование"
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=alert_status)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=coverage)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=iljakorn_troubleshootingApp&metric=security_rating)](https://sonarcloud.io/dashboard?id=iljakorn_troubleshootingApp)
+[![Coverage Status](https://coveralls.io/repos/github/iljaKorn/troubleshootingApp/badge.svg?branch=master)](https://coveralls.io/github/iljaKorn/troubleshootingApp?branch=master)
 
 # Задание 1
 Создал простой CRUD сервис для манипуляций с сущностью Student \
