@@ -32,7 +32,7 @@
         <sonar.projectKey>iljaKorn_troubleshootingApp</sonar.projectKey>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
-        <sonar.organization>ilyakorn</sonar.organization>
+        <sonar.organization>iljakorn</sonar.organization>
     </properties>
     <dependencies>
         <dependency>
