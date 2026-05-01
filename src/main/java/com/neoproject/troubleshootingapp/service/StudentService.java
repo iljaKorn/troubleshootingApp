@@ -33,7 +33,8 @@ public class StudentService {
             throw new IllegalArgumentException("Университет обязателен для заполнения");
         }
 
-        log.debug("Запушен цикл для имитации задержки");
+        log.debug("Запущена имитация задержки создания студента");
+        long startTime = System.currentTimeMillis();
         int num = 1;
         for (int i = 0; i < 1000000; i++) {
             num *= 1001;
@@ -41,6 +42,7 @@ public class StudentService {
                 num -= 1;
             }
         }
+        log.debug("Имитация задержки завершена за {} мс", System.currentTimeMillis() - startTime);
 
         Student saveStudent = studentRepository.save(student);
         log.info("Студент с id: {} успешно сохранен", saveStudent.getId());
